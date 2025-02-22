@@ -9,7 +9,7 @@ const uploadImageRoutes = require("./routes/image-routes");
 connectToDB();
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3002; // Change the port number here
 
 //Middlewares
 app.use(express.json());
@@ -20,5 +20,5 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/image", uploadImageRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Server is now listeining to PORT ${PORT}`);
+  console.log(`Server is now listening to PORT ${PORT}`);
 });
